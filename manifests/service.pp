@@ -9,6 +9,7 @@ class asterisk::service {
   if $manage_service {
     service {$asterisk::service_name:
       ensure  => running,
+      enable  => true,
     }
   } else {
     service {$asterisk::service_name:
